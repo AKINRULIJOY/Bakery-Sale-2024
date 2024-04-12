@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 # import matplotlib
 # from matplotlib import pyplot as plt
+import seaborn as sns
 
 
 # load data
@@ -91,9 +92,13 @@ filtered_table = table[table['article'].isin(selected_articles)]
 
  # bar plot
 st.subheader("Bar chart")
-fig1, ax1 = plt.subplots(figsize=(10,6))
-ax1.bar(filtered_table['article'],filtered_table['sales'])
-st.pyplot(fig1)
+# fig1, ax1 = plt.subplots(figsize=(10,6))
+# ax1.bar(filtered_table['article'],filtered_table['sales'])
+# st.pyplot(fig1)
+
+st.subheader("Bar chart")
+fig1 = sns.barplot(data=filtered_table, x=selected_articles, y=filtered_table['sales'])
+st.pyplot(fig1.get_figure())
 
 
 # pie chart
