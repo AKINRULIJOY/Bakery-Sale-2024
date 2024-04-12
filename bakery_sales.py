@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 # import matplotlib
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
 
 # load data
